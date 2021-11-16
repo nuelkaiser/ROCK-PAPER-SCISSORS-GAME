@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;1,600;1,700&display=swap');
+
+.game-bck {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient( at top ,hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-point {
+   border: 3px solid  hsl(217, 16%, 45%);
+   margin-top: 2em;
+   padding: 15px 15px 10px 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: x-large;
+   border-radius: 8px;
+   gap: 10em;
+}
+
+.game-point {
+    background: #fff;
+    text-align: center;
+    padding: 18px  35px;
+    border-radius:  8px;
+}
+
+.score {
+    font-size: large;
+    color:  hsl(229, 64%, 46%);
+}
+
+.score-fig {
+    color:  hsl(229, 25%, 31%);
+}
+
+.game-btns {
+    margin-top: 2.5em;    
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4em; 
+    background-image: url('/rock-paper-scissors-master/images/bg-triangle.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.btn-bg{
+    background: #fff;
+    padding: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.grd-sp {
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.paper {
+    background: linear-gradient( hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+
+.scissors {
+    background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.rock  {
+    background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.rules {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    outline: none;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 7px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.play {
+    position: relative;
+    background: aliceblue;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    color: hsl(229, 25%, 31%);
+    font-size: 16px;
+    cursor: pointer
+    ;
+}
+
+
+.show-rules {
+    background-image: url(/rock-paper-scissors-master/images/image-rules.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+   background-color: transparent;
+   height: 100%;
+   width: 100%;
+}
+
+.modal-container {
+    display: none;
+    height: 65%;
+    width: 30%;
+    position: absolute;
+    top: 8em;
+    background-color: aliceblue;
+    padding: 30px 40px;
+    border-radius: 8px;
+    transform: scale(.8);
+}
+
+.close-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.close-modal-hd {
+    color:   hsl(229, 25%, 31%);
+}
+
+.close-svg {
+    cursor: pointer;
+}
+  
+.btn-pos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+
+.contest {
+    display: none;
+    margin-top: 4em;
+    align-items: center;
+    gap: 3em;
+    color: #fff;
+}
+
+.winner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+@media  (max-width:  1024px) {
+    .game-btns {
+        width: 37vw;
+    }
+
+    .modal-container {
+        width: 40vw;
+        transform: scale(.7);
+    }
+}
+
+
+@media  (max-width:  768px) {
+
+  .game-btns {
+    width: 50vw;
+    margin-top: 2em;
+    transform: scale(.9);
+  }
+
+  .grd-sp {
+    padding: 12px;
+  }
+
+  .modal-container  {
+    width: 50vw;
+    height: 75vh;
+  }
+}
+
+
+@media  (max-width:  425px) {
+    .title-point {
+        gap: 4em;
+        padding: 10px 17px;
+        margin-top: 1em;
+    }
+
+    .rpc {
+        margin-bottom: -8px;
+    }
+
+    .game-point {
+        padding: 12px 20px;
+    }
+
+    .game-btns {
+        margin-top: 1em;
+        width: 80vw;
+        transform: scale(.8);
+    }
+
+    .rules {
+        position: initial;
+    }
+
+    .modal-container {
+        height: 124vh;
+        width: 123vw;
+        position: absolute;
+        top: -5em;
+        background-color: aliceblue;
+        padding: 30px 40px;
+        border-radius: 8px;
+        transform: scale(.8);
+    }
+
+    .close-modal {
+        position: absolute;
+        flex-direction: column;
+        right: 42%;
+        top: 15%;
+        gap: 30em;
+    }
+
+    .contest {
+        transform: scale(.8);
+        gap: 2em;
+    }
+
+    .play {
+        padding: 10px 10px;
+        width: 30vw;
+    }
+}
+  
+
+@media  (max-width:  375px) {
+    .title-point {
+        gap: 2em;
+    }    
+
+    .game-btns {
+        width: 105vw;
+        margin-top: 0;
+    }
+
+    .close-modal {
+        right: 39%;
+    }
+}
+  
+
+@media  (max-width:  320px) {
+    .title-point {
+        gap: 1em;
+    }    
+
+    .close-modal {
+        right: 38%;
+    }
+
+    .contest {
+        transform: scale(.7);
+    }
+
+}
+  
